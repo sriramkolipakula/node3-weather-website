@@ -9,7 +9,8 @@ const forecast = (latitude,longitude,callback)=>{
             callback('cannot find the given forecast for given..',undefined)
         }
         else{
-            callback(undefined,body.current.weather_descriptions[0]+' it is currently '+body.current.temperature+' degrees out. There is a'+body.current.precip +'% chance of rain')
+            // console.log(body.current.temperature)
+            callback(undefined,body.current.weather_descriptions[0] + 'The humidity is ' + body.current.humidity + ' it is currently '+body.current.temperature+' degrees out. There is a'+body.current.precip +'% chance of rain')
         }
     })
 }
