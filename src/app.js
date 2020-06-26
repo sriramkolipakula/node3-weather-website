@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast.js')
 
 
 const app = express()
+const port = process.env.PORT || 3000
 //define paths for express config
 const publicpath = path.join(__dirname,'../public')
 const viewpath = path.join(__dirname,'../templets/views')
@@ -87,6 +88,6 @@ app.get('*',(req,res)=>{
         errormsg:'page not found',
     })
 })
-app.listen(3000,()=>{
-    console.log('server is up on port 3000')
+app.listen(port,()=>{
+    console.log('server is up on port '+port)
 })
